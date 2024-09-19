@@ -9,10 +9,10 @@ previo a inicializar el desarrollo de software para web usando el fremework de N
 |No|Descripcion|Potenciador|Estatus|
 |--|--|--|--|
 |1|Metologia de Evaluacion|1|Finalizada|
-|2|Inicializacion del Proyecto de Fundamentos de JS|5|Activa|
-|3|Declaracion de datos (Undefiend/Boolean/Number)|10|Activa|
-|4|Introducion a objetos (String/BigInit/Symbol/Null/Function)|10|Activa|
-
+|2|Inicializacion del Proyecto de Fundamentos de JS|5|Finalizada|
+|3|Declaracion de datos (Undefiend/Boolean/Number)|10|Finalizada|
+|4|Declaracion de datos (String/BigInit/Symbol/Null/Function)|6|Finalizada|
+|5|Introducion a objetos |Por Definir|Activa|
 
 
 ## Autor 
