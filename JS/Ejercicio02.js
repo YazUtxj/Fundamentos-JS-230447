@@ -1,65 +1,62 @@
-// Tipos de Datos en JS
-// 1. Undefined
-console.warn("--- Tipo de Dato UNDEFIEND");
-let cliente;
-console.log(`El cliente es:  ${cliente}`);
-console.log(`El tipo de dato de la variable cliente es: ${typeof cliente}`);
-cliente = "Juan Romero";
-console.log(`El cliente es:  ${cliente}`);
-console.log(`El tipo de dato de la variable cliente es: ${typeof cliente}`);
-cliente = 19227;
-console.log(`El cliente es:  ${cliente}`);
-console.log(`El tipo de dato de la variable cliente es: ${typeof cliente}`);
-// Undefined es el tipo de dato que por defecto se asigna a variables no inicializadas o no declaradas
-// 2. BOOLEAN
-console.warn("--- Tipo de Dato : BOOLEAN (Boleano - True/ False");
-//console.log(`El cliente ha realizado ${NumCompras} en este mes.`);
-
-let esPremium = "No lo sé";
-console.log(`¿Es el cliente Premium? : ${esPremium}`);
-console.log(
-  `El tipo de dato de la variable esPrremium es: ${typeof esPremium}`
-);
-console.log('Asignando el valor "true" a la variable. ');
-esPremium = "true";
-console.log(
-  `El tipo de dato de la variable esPrremium es: ${typeof esPremium}`
-);
-console.log("Asignando el valor true a la variable. ");
-esPremium = true;
-console.log(
-  `El tipo de dato de la variable esPrremium es: ${typeof esPremium}`
-);
-console.log(`¿Es el cliente Premium? : ${esPremium}`);
-console.log("Cambiando el valor de esPremium a false");
-esPremium = 0;
-if (esPremium) console.log("El cliente pago por usar el servicio.");
-else console.log("El cliente que recibe los servicios gratuitos");
-// 3. NUMBER
-var cantidad;
-const costo_producto = 10.5;
-let saldo_cuenta = -2500.4;
-let monto_transaccion;
-console.warn(
-  "--- Tipo de Dato - NUMBER (Números, positivos, negativos, decimleas , flotantes"
-);
-console.log(
-  `Tu saldo al día de hoy es de: ${saldo_cuenta},  (Tipo de Dato = ${typeof saldo_cuenta})`
-);
-console.log(`El producto que has seleccionado cuesta: ${costo_producto}`);
-cantidad = 8;
-console.log(`Has elegido comprar:  ${cantidad} de productos.`);
-console.log(`El importe total de la compra es: ${cantidad * costo_producto}`);
-saldo_cuenta = saldo_cuenta - cantidad * costo_producto;
-console.log(`Tu nuevo saldo es de: ${saldo_cuenta}`);
-// El cliente realiza un abono de 1500
-monto_transaccion = 1500;
-console.log(
-  `Tu abono de : ${monto_transaccion} ha sido recibido, tu nuevo saldo es de: ${
-    saldo_cuenta + monto_transaccion
-  }`
-);
-
+// // Tipos de Datos en JS
+// // 1. Undefined
+// console.warn("--- Tipo de Dato UNDEFIEND");
+// let cliente;
+// console.log(`El cliente es:  ${cliente}`);
+// console.log(`El tipo de dato de la variable cliente es: ${typeof cliente}`);
+// cliente = "Juan Romero";
+// console.log(`El cliente es:  ${cliente}`);
+// console.log(`El tipo de dato de la variable cliente es: ${typeof cliente}`);
+// cliente = 19227;
+// console.log(`El cliente es:  ${cliente}`);
+// console.log(`El tipo de dato de la variable cliente es: ${typeof cliente}`);
+// // Undefined es el tipo de dato que por defecto se asigna a variables no inicializadas o no declaradas
+// // 2. BOOLEAN
+// console.warn("--- Tipo de Dato : BOOLEAN (Boleano - True/ False");
+// let esPremium = "No lo sé";
+// console.log(`¿Es el cliente Premium? : ${esPremium}`);
+// console.log(
+//   `El tipo de dato de la variable esPrremium es: ${typeof esPremium}`
+// );
+// console.log('Asignando el valor "true" a la variable. ');
+// esPremium = "true";
+// console.log(
+//   `El tipo de dato de la variable esPrremium es: ${typeof esPremium}`
+// );
+// console.log("Asignando el valor true a la variable. ");
+// esPremium = true;
+// console.log(
+//   `El tipo de dato de la variable esPrremium es: ${typeof esPremium}`
+// );
+// console.log(`¿Es el cliente Premium? : ${esPremium}`);
+// console.log("Cambiando el valor de esPremium a false");
+// esPremium = 0;
+// if (esPremium) console.log("El cliente pago por usar el servicio.");
+// else console.log("El cliente que recibe los servicios gratuitos");
+// // 3. NUMBER
+// var cantidad;
+// const costo_producto = 10.5;
+// let saldo_cuenta = -2500.4;
+// let monto_transaccion;
+// console.warn(
+//   "--- Tipo de Dato - NUMBER (Números, positivos, negativos, decimleas , flotantes"
+// );
+// console.log(
+//   `Tu saldo al día de hoy es de: ${saldo_cuenta},  (Tipo de Dato = ${typeof saldo_cuenta})`
+// );
+// console.log(`El producto que has seleccionado cuesta: ${costo_producto}`);
+// cantidad = 8;
+// console.log(`Has elegido comprar:  ${cantidad} de productos.`);
+// console.log(`El importe total de la compra es: ${cantidad * costo_producto}`);
+// saldo_cuenta = saldo_cuenta - cantidad * costo_producto;
+// console.log(`Tu nuevo saldo es de: ${saldo_cuenta}`);
+// // El cliente realiza un abono de 1500
+// monto_transaccion = 1500;
+// console.log(
+//   `Tu abono de : ${monto_transaccion} ha sido recibido, tu nuevo saldo es de: ${
+//     saldo_cuenta + monto_transaccion
+//   }`
+// );
 //4. STRING (Cadena de Caractéres)
 const alumno = "Marco A. Ramírez Hernández"
 let producto;
@@ -84,14 +81,14 @@ console.log(`El cuarto experimento de un numero grandre es: ${numeroGrande4}, qu
 
 // Para definir el tipo de dato BigInt debemos invocar la función BigInt o usar un la letra "n" al final del número en la asignación de valor.
 console.log("Declaramos los valores númericos gran tamaño...")
-numeroGrande3 = BigInt(12345678901234567890123456789);
-numeroGrande4 = 123456789012345678901234567891234567890n;
+//numeroGrande3 = BigInt(12345678901234567890123456789);
+//numeroGrande4 = 123456789012345678901234567891234567890n;
 console.log(`El segundo experimento de un numero grandre es: ${numeroGrande3}, y su tipo de dato es: ${typeof(numeroGrande3)}`)
 console.log(`El segundo experimento de un numero grandre es: ${numeroGrande4}, y su tipo de dato es: ${typeof(numeroGrande4)}`)
 // Hay que considerar que los tipos de datos declarados cómo BigInt no son operables con los de tipo number
 let numero = 238;
 // Si intentamos realizar una operación matemática entre estos dos tipos de datos, obtendremos un error crítico de operación.
-console.log(`El resultado de la operación de: numeroGrande4/ numero es = a : ${numeroGrande4/BigInt(numero)}` );
+//console.log(`El resultado de la operación de: numeroGrande4/ numero es = a : ${numeroGrande4/BigInt(numero)}` );
 // 6. SYMBOL
 console.warn("--- Tipo de Dato - SYMBOL (Simbolo o Forzar la Unicidad)");
 // Declaramos diferentes variables con valores similares o iguales?
@@ -174,4 +171,31 @@ console.log(`El usuario: ${nombreUsuario} esta intentado logearse con una contra
 // Dado que Marco es del genero Másculino, y denota que su estatus de relación no ha sido capturado o lo mantiene privado esto generar la actualización de los valores de las variables
 generoUsuario="M"
 estatusRelacionSentimental=null
-console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener acceso a su información de perfil podemos deducir que es del género ${generoUsuario} y que su estatus de relación es: ${estatusRelacionSentimental} y su última publicación la realizó el: ${fecha_ultimoPost}`);
+console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener acceso a su información de perfil 
+  podemos deducir que es del género ${generoUsuario} y que su estatus de relación es: 
+  ${estatusRelacionSentimental} y su última publicación la realizó el: ${fecha_ultimoPost}`);
+
+  //Comparando NULL VS UNDEFINED
+  // si bien UNDEFINED y NULL tienen el mismo valor , no tienen el mismo tipo de dato
+  console.log("COMPARACION DE LA EQUIDAD ENTRE UNDEFINED Y NULL :");
+  (fecha_ultimoPost==estatusRelacionSentimental)?
+  console.log("ambas variables tienen el mismo valor"):
+  console.log("la variable no tiene el mismo valor ");
+
+  console.log("COMPARACION DE LA IDENTIDAD ENTRE UNDEFINED :");
+    (fecha_ultimoPost===estatusRelacionSentimental)?
+    console.log("ambas variables tienen el mismo valor y el mismo tipo de datos"):
+    console.log("la variables tienen el mismo valor , pero no el mismo tipo de dato ");
+
+    // 8:FUNTION (fUNCIONES)
+    console.warn("---Tipo de dato FUNCTION (function)")
+    //declaramos una funcion que nos permite recibir un parametro en este caso el nombre
+    // de la persona a saludar y le enviamos un saludo , esta funcion la asignamos a una constante.
+    const saludar = function(nombre){
+      return `Hola , ${nombre} !`
+    }
+    //invocamos a la funcion declarada
+    console.log(saludar(`Yazmin`));
+
+    //Y Tipo de dato que tiene la constante
+    console.log(`el tipo de dato de la constante saludar es :${typeof(saludar)}`)
