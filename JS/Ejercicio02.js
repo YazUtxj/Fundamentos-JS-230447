@@ -13,6 +13,8 @@ console.log(`El tipo de dato de la variable cliente es: ${typeof cliente}`);
 // Undefined es el tipo de dato que por defecto se asigna a variables no inicializadas o no declaradas
 // 2. BOOLEAN
 console.warn("--- Tipo de Dato : BOOLEAN (Boleano - True/ False");
+//console.log(`El cliente ha realizado ${NumCompras} en este mes.`);
+
 let esPremium = "No lo sé";
 console.log(`¿Es el cliente Premium? : ${esPremium}`);
 console.log(
@@ -57,3 +59,25 @@ console.log(
     saldo_cuenta + monto_transaccion
   }`
 );
+
+// STRING (Cadena de Caractéres)
+const alumno = "Marco A. Ramírez Hernández"
+let producto;
+console.warn("--- Tipo de Dato - STRING (Cadena de Caractéres");
+console.log(`El nombre del alumno es: ${alumno}, que es un tipo de dato ${typeof(alumno)}`);
+producto="MONITOR 20\"";
+console.log(`El nombre del producto es: ${producto}, que es un tipo de dato ${typeof(producto)}`);
+// Manipulando los STRINGS
+console.log(`Más adelante podremos transformar el contenido de los STRINGS usando funciones específicas cómo convertir a mayúsculas: ${alumno} => ${alumno.toUpperCase()}`);
+console.log(`O en su defecto a minúsculas: ${producto} => ${producto.toLowerCase()}`);
+// BIGINT (Enteros de Dimensiones Amplias) - Generalmente utilizado en sistemas matemáticos, físicos o espaciales donde se requiere de una excelente precisión numérica.
+console.warn("--- Tipo de Dato - BIGINT (Número Ampplio");
+const numeroGrande = 1234567890
+const numeroGrande2 = 12345678901234567890
+const numeroGrande3 = 12345678901234567890123456789
+const numeroGrande4 = 123456789012345678901234567891234567890
+console.log(`El primero experimento de un numero grandre es: ${numeroGrande}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande)}`)
+console.log(`El primero experimento de un numero grandre es: ${numeroGrande2}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande2)}`)
+console.log(`El primero experimento de un numero grandre es: ${numeroGrande3}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande3)}`)
+console.log(`El primero experimento de un numero grandre es: ${numeroGrande4}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande4)}`)
+console.log()
