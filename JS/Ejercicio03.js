@@ -38,6 +38,7 @@ console.log(typeof (Producto_SKU));
 console.log("%c2.- Objeto", style_console);
 let Producto =
 {
+    ID: 100,
     Nombre: "Celular",
     Marca: "Phone",
     Modelo: "16PROMAX",
@@ -67,7 +68,7 @@ console.log("%c3.- Destructuración de Objetos", style_console);
 
 let Producto2 =
 {
-    Clave: 316,
+    Clave: 416,
     Nombre: "Celular",
     Marca: "SAMSUNG",
     Modelo: "24PROMAX",
@@ -83,6 +84,7 @@ let Producto2 =
 
 let Comprador =
 {
+    ID:325,
     Clave: 3216,
     Nombre: "Yazmin",
     Apellidos: "Gutierrez Hernandeaz",
@@ -93,6 +95,7 @@ let Comprador =
 }
 
 let Pedido = {
+    ID: 230,
     Producto_Clave: 316,
     Comprador_Clave: 3216,
     Cantidad: 2,
@@ -196,7 +199,7 @@ console.table(Pedido)
 
 // Desustructuracion de 2 o mas objetos
 console.log("%c9.- Desustructuracion de 2 o mas Objetos", style_console);
-let { Precio: productoPrecio,  Marca: productoMarca } = Producto
+let { Precio: productoPrecio, Marca: productoMarca } = Producto
 let { Correo: clienteCorreo, PaisOrigen: clientePais, SaldoActual: clienteSaldo, Tipo: clienteTipo } = Comprador
 
 //Tranforma valores cuantitavios a cualitativos
@@ -214,31 +217,84 @@ else
 
 //Transformar valores cualitativos a cuantitativos
 let clienteNivel;
-if(clienteTipo =="Premiun")
-    clienteNivel =1 
-if(clienteTipo == "Freenium")
-    clienteNivel =2
-if(clienteTipo =="No identificado")
+if (clienteTipo == "Premiun")
+    clienteNivel = 1
+if (clienteTipo == "Freenium")
+    clienteNivel = 2
+if (clienteTipo == "No identificado")
     clienteNivel = 3;
 
 //Clasificamos al client4e por su Pais de Origen
-if(clientePais =="Mexico")
+if (clientePais == "Mexico")
     clientePais = "Nacional"
 else
-clientePais ="Extranjero"
+    clientePais = "Extranjero"
 
 // OLE - Object Literal Enhacemenhn
-let datosClientePromociones = {clienteCorreo,clientePais,clienteNivel,productoMarca,productoPrecio}
+let datosClientePromociones = { clienteCorreo, clientePais, clienteNivel, productoMarca, productoPrecio }
 // El nuevo objeto que creamos , seria un nuevo ejemplo de la informacion que enviariamos al area de Marketing para la difusion de promociones
 console.log(`Los datos del cliente   y sus habitos de comprar son`)
 console.table(datosClientePromociones)
 
 
 
-
-
-
 // Operaciones sobre Onjetos 
 // UNION DE OBJETOS
 console.log("%c10.- Metodos para controlar la mutabilidad de los Objetos , Sellado(SEAL)", style_console);
+console.log("Imprimir  la estructura  y valores del objeto PRODUCTO")
+console.table(Producto);
 
+console.log("Imprimimos la estructura y valores del objeto PEDIDO")
+console.table(Pedido);
+
+//Suponiendo que el usuario ya realizo el pagoel pedido se convertira en una venta que requiere informacion de ambos objetos
+console.warn("EL ASSSING NO SOLO PERMITE LA FUSION DE DOS O MAS OBJETOS ,TAMBIEN MUTA LOS OBJETOS ORIGINALES , PERDIENDO EL VALOR ORIGINAL ")
+const Venta = Object.assign(Producto, Pedido);
+console.log("Consultamos este nuevo objeto Venta")
+console.table(Venta);
+// AL USAR EL METODO ASSIGN YA QUE SE PIERDE INFORMACION SI LAS PROPIEDADES SE LLAMAN IGUAL
+
+
+// uNION DE OBJETOS USANDO  ·SPREAD OPERATOR · PARA EVITARLA PERDIDA DDE INFORMACION CON OBJETOS QUE COMPARTEN EL MISMO NOMBRE EN SUS PROPIEDADES
+console.log("%c11.- Metodos para controlar la mutabilidad de los Objetos  usando SPREAD OPERATOR(..)", style_console);
+//console.log("Imprimir  la estructura  y valores del objeto PRODUCTO")
+let Prodcuto3 = {...Producto} // Con esto haces una copia entera de el mapa
+Producto.ID=100; //esto es un parche usando para  
+let Venta2 =
+{
+    producto:{...Producto},
+    comprador: { ...Comprador },
+    pedido: { ...Pedido },
+   
+}
+console.log("Fusionamos los 3 objetos  en uno nuevo , sin perdida de informacion")
+console.table(Venta2);
+console.log(Venta2)
+
+console.log("%c12.- Reto", style_console);
+let spotyUser =
+{
+    Name:"",// congelado
+    nickname:"", // sellado
+    email:"", // sellado
+    password:"", // sellado
+    rol:"", //sellado
+    since: "" ,// congelADO
+    playList:["Las domingueras" , "Bandamx"]
+}
+// vAMOS A VERIFICAR EL ESTATUS DE MUTABILIDAD DE LOS OBJETOS
+console.log("Vamos a ver si el objeto PEDIDO esta congeladfo?")
+console.log(`Esta el objeto de Pedido Congelado?:  ${Object.isFrozen(Pedido)}`);
+console.log(`Esta el objeto de Pedido Congelado?:  ${Object.isSealed(Pedido)}`);
+
+console.log("Vamos a ver si el objeto COMPRADOR esta congeladfo?")
+console.log(`Esta el objeto de Pedido Congelado?:  ${Object.isFrozen(Comprador)}`);
+console.log(`Esta el objeto de Pedido Congelado?:  ${Object.isSealed(Comprador)}`);
+
+console.log("Vamos a ver si el objeto PRODUCTO esta congeladfo?")
+console.log(`Esta el objeto de Pedido Congelado?:  ${Object.isFrozen(Producto)}`);
+console.log(`Esta el objeto de Pedido Congelado?:  ${Object.isSealed(Producto)}`);
+
+// mODIFICAMOS LA ESTRUCTURA DE PRODUCTO , AGREGANDO UNA NUEVA PROPIEDAD
+Producto[`isLegacy`] = false;
+console.table(Venta2)
