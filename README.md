@@ -9,10 +9,15 @@ previo a inicializar el desarrollo de software para web usando el fremework de N
 |No|Descripcion|Potenciador|Estatus|
 |--|--|--|--|
 |1|Metologia de Evaluacion|1|Finalizada|
+<<<<<<< HEAD
 |2|Inicializacion del Proyecto de Fundamentos de JS|5|Finalizada|
 |3|Declaracion de datos (Undefiend/Boolean/Number)|10|Finalizada|
 |4|Introducion a objetos (String/BigInit/Symbol/Null/Function)|6|Finalizada|
 |5|Introducion a objetos |Finalizada|Activa|
+
+
+
+
 
 
 ## Autor 
