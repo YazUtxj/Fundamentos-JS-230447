@@ -271,7 +271,6 @@ console.log("Fusionamos los 3 objetos  en uno nuevo , sin perdida de informacion
 console.table(Venta2);
 console.log(Venta2)
 
-console.log("%c12.- Reto", style_console);
 let spotyUser =
 {
     Name:"",// congelado
@@ -282,6 +281,7 @@ let spotyUser =
     since: "" ,// congelADO
     playList:["Las domingueras" , "Bandamx"]
 }
+console.log("%c12.- Mutabilidad POST Union dE Objetos", style_console);
 // vAMOS A VERIFICAR EL ESTATUS DE MUTABILIDAD DE LOS OBJETOS
 console.log("Vamos a ver si el objeto PEDIDO esta congeladfo?")
 console.log(`Esta el objeto de Pedido Congelado?:  ${Object.isFrozen(Pedido)}`);
