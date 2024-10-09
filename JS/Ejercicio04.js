@@ -231,3 +231,4 @@ console.table(signosZodiacales.map(signoZodiacal => signoZodiacal.toUpperCase())
 costosListasCompras = [15, 52.50, 16.90, 32.50, 28, 105, 42, 2, 94, 10];
 // como podemso calcular el total de una lista de costos de un carrito de compras
 console.log(`El total de la compras es: ${costosListasCompras.reduce((total,precio) =>total +precio ,0).toFixed(2)}`);
+//comentario ramdom para un commit
