@@ -300,7 +300,7 @@ console.log("Fin de la reproduccion");
 
 console.log("%c9 .- Ciclos para rrecorrer elementos finitos (FOR ... OF))", style_console);
  let seriesTrinading =[
-    { nombre: "The witcher ", temporadas:3 ,totalViews: "1.5M" , totalReproducciones:"3.0M"},
+    { nombre: "The witcher ", temporadas:15 ,totalViews: "1.5M" , totalReproducciones:"3.0M"},
     { nombre : "Stranger Things", temporadas :4, totalViews:"6.5M" , totalReproducciones:"10m"},
     { nombre: "The Boys", temporadas:3, totalViews :"2.2M",totalReproducciones:"20m"},
     { nombre : "Loki", temporadas :2,totalViews: "250K" , totalReproducciones:"475k"},
@@ -366,4 +366,4 @@ let seriesConTresTemporadas = seriesTrending2
 .filter(nombre => serieDeseadas.includes(nombre)); // Filtramos las que estan en la lista deseadas
 //Mostar los resultaods
 console.log("Serie con 3 temporadas que estan en la lista deseada")
-console.table(seriesConTresTemporadas);
+console.table(seriesConTresTemporadas); 
